@@ -41,7 +41,7 @@ install -d $RPM_BUILD_ROOT{%{_applnkdir}/Games,%{_pixmapsdir}}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
-gzip -9nf AUTHORS CREDITS ChangeLog NEWS README README.en TODO 
+gzip -9nf AUTHORS CREDITS ChangeLog NEWS README README.en
 
 %clean
 rm -rf $RPM_BUILD_ROOT
