@@ -2,7 +2,7 @@ Summary:	3D tabletennis game
 Summary(pl):	Trójwymiarowy tenis sto³owy
 Name:		csmash
 Version:	0.6.6
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/cannonsmash/%{name}-%{version}.tar.gz
@@ -49,12 +49,12 @@ rm -f acinclude.m4
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_applnkdir}/Games,%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %find_lang %{name}
@@ -68,5 +68,5 @@ rm -rf $RPM_BUILD_ROOT
 %lang(ja) %doc README
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/games/csmash
-%{_applnkdir}/Games/*
+%{_desktopdir}/*
 %{_pixmapsdir}/*
