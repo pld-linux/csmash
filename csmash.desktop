@@ -7,5 +7,5 @@ Exec=csmash
 Terminal=false
 Type=Application
 Encoding=UTF-8
-Categories=Game;SportsGame;
+Categories=GTK;Game;SportsGame;
 # vi: encoding=utf-8
