@@ -1,0 +1,20 @@
+--- csmash-0.6.4/loadparts.cpp.orig	Tue Mar  5 15:23:19 2002
++++ csmash-0.6.4/loadparts.cpp	Thu Aug 29 13:22:49 2002
+@@ -245,7 +245,7 @@
+ 
+ 	while ('\\' == line[l-1]) {
+             // concat next line(s)
+-	    int bufsize = clamp(0U, sizeof(line)-l, sizeof(line)-1);
++	    int bufsize = clamp((size_t)0U, sizeof(line)-l, sizeof(line)-1);
+ 	    fgets(&line[l-2], bufsize, fp);
+ 	    if (feof((FILE*)fp)) break;
+ 	    l = strlen(line);
+@@ -430,7 +430,7 @@
+ 	}
+     }
+     if (!i) {
+-	printf("%d: %s is empty object\n", lineno, object->name);
++	printf("%d: %s is empty object\n", lineno, object->name.data());
+     }
+     return true;
+ }
