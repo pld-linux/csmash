@@ -2,7 +2,7 @@ Summary:	3D tabletennis game
 Summary(pl):	Trójwymiarowy tenis sto³owy
 Name:		csmash
 Version:	0.6.6
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/cannonsmash/%{name}-%{version}.tar.gz
