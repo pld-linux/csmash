@@ -5,7 +5,7 @@ Version:	0.6.4.2
 Release:	3
 License:	GPL
 Group:		X11/Applications/Games
-Source0:	http://prdownloads.sourceforge.net/cannonsmash/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/cannonsmash/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-types.patch
