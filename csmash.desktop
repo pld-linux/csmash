@@ -1,8 +1,9 @@
 [Desktop Entry]
 Name=Cannon Smash
 Comment=3D tabletennis game
-Comment[pl]=TrÛjwymiarowy tenis sto≥owy
+Comment[pl]=Tr√≥jwymiarowy tenis sto≈Çowy
 Icon=csmash.png
 Exec=csmash
 Terminal=0
 Type=Application
+# vi: encoding=utf-8
