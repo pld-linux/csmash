@@ -1,5 +1,6 @@
---- csmash-0.6.4/loadparts.cpp.orig	Tue Mar  5 15:23:19 2002
-+++ csmash-0.6.4/loadparts.cpp	Thu Aug 29 13:22:49 2002
+diff -burN csmash-0.6.6.orig/loadparts.cpp csmash-0.6.6/loadparts.cpp
+--- csmash-0.6.6.orig/loadparts.cpp	2003-11-30 18:38:43.000000000 +0100
++++ csmash-0.6.6/loadparts.cpp	2003-11-30 18:40:20.000000000 +0100
 @@ -245,7 +245,7 @@
  
  	while ('\\' == line[l-1]) {
@@ -9,12 +10,3 @@
  	    fgets(&line[l-2], bufsize, fp);
  	    if (feof((FILE*)fp)) break;
  	    l = strlen(line);
-@@ -430,7 +430,7 @@
- 	}
-     }
-     if (!i) {
--	printf("%d: %s is empty object\n", lineno, object->name);
-+	printf("%d: %s is empty object\n", lineno, object->name.data());
-     }
-     return true;
- }
