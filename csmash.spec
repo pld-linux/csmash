@@ -38,10 +38,9 @@ przedstawienie ró¿nych strategii tenisa sto³owego w grze komputerowej.
 
 %build
 rm -f acinclude.m4 missing
-touch acinclude.m4
 aclocal
 autoconf
-automake -a -c
+automake -a -c -i
 CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 %configure
 %{__make}
