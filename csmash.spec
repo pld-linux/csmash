@@ -12,12 +12,13 @@ Source2:	%{name}.png
 Patch0:		%{name}-types.patch
 URL:		http://CannonSmash.Sourceforge.net/
 BuildRequires:	OpenGL-devel
-BuildRequires:	SDL-devel
+BuildRequires:	SDL-devel >= 1.2.0
+BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
-BuildRequires:	gtk+-devel
+BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	libjpeg-devel
 BuildRequires:	libstdc++-devel
 Requires:	OpenGL
@@ -38,7 +39,7 @@ przedstawienie ró¿nych strategii tenisa sto³owego w grze komputerowej.
 %patch0 -p1
 
 %build
-rm -f acinclude.m4 missing
+rm -f acinclude.m4
 %{__gettextize}
 %{__aclocal}
 %{__autoconf}
