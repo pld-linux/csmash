@@ -1,11 +1,11 @@
 Summary:	3D tabletennis game
 Summary(pl):	Trójwymiarowy tenis sto³owy
 Name:		csmash
-Version:	0.6.3
+Version:	0.6.4.2
 Release:	1
 License:	GPL
 Group:		X11/Applications/Games
-Source0:	http://prdownloads.SourceForge.net/CannonSmash/%{name}-%{version}.tar.gz
+Source0:	http://prdownloads.sourceforge.net/cannonsmash/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://CannonSmash.Sourceforge.net/
@@ -32,14 +32,13 @@ CannonSmash to trójwymiarowy tenis sto³owy. Celem tego projektu jest
 przedstawienie ró¿nych strategii tenisa sto³owego w grze komputerowej.
 
 %prep
-%setup -q
+%setup -q -n %{name}-0.6.4
 
 %build
 rm -f acinclude.m4 missing
 aclocal
 autoconf
-automake -a -c -i
-CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
+automake -a -c -f -i
 %configure
 %{__make}
 
@@ -53,14 +52,16 @@ install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 gzip -9nf AUTHORS CREDITS ChangeLog NEWS README README.en
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS* CREDITS* ChangeLog* NEWS* README.en*
 %lang(jp) %doc README.gz
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/csmash
+%{_datadir}/games/csmash
 %{_applnkdir}/Games/*
 %{_pixmapsdir}/*
