@@ -6,6 +6,7 @@ Release:	3
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/cannonsmash/%{name}-%{version}.tar.gz
+# Source0-md5:	c4c4f0375f2d223feddb1eb4b7b04349
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-types.patch
