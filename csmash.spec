@@ -38,7 +38,7 @@ przedstawienie ró¿nych strategii tenisa sto³owego w grze komputerowej.
 
 %build
 rm -f acinclude.m4 missing
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake} -i
 %configure
