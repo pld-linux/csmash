@@ -1,7 +1,7 @@
 Summary:	3D tabletennis game
 Summary(pl):	Trójwymiarowy tenis sto³owy
 Name:		csmash
-Version:	0.6.2
+Version:	0.6.3
 Release:	1
 License:	GPL
 Group:		X11/Applications/Games
@@ -37,7 +37,7 @@ przedstawienie ró¿nych strategii tenisa sto³owego w grze komputerowej.
 %setup -q
 
 %build
-rm -f acinclude.m4 mizzing
+rm -f acinclude.m4 missing
 touch acinclude.m4
 aclocal
 autoconf
