@@ -1,7 +1,7 @@
 Summary:	3D tabletennis game
 Summary(pl):	Trójwymiarowy tenis sto³owy
 Name:		csmash
-Version:	0.6.1
+Version:	0.6.2
 Release:	1
 License:	GPL
 Group:		X11/Applications/Games
@@ -12,6 +12,13 @@ Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://CannonSmash.Sourceforge.net/
 BuildRequires:	OpenGL-devel
+BuildRequires:	SDL-devel
+BuildRequires:	SDL_mixer-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	gtk+-devel
+BuildRequires:	libjpeg-devel
+BuildRequires:	libstdc++-devel
 Requires:	OpenGL
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -30,6 +37,12 @@ przedstawienie ró¿nych strategii tenisa sto³owego w grze komputerowej.
 %setup -q
 
 %build
+rm -f acinclude.m4 mizzing
+touch acinclude.m4
+aclocal
+autoconf
+automake -a -c
+CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 %configure
 %{__make}
 
@@ -48,7 +61,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS* CREDITS* ChangeLog* NEWS* TODO* README.en*
+%doc AUTHORS* CREDITS* ChangeLog* NEWS* README.en*
 %lang(jp) %doc README.gz
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/csmash
