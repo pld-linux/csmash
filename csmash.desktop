@@ -2,6 +2,7 @@
 Name=Cannon Smash
 Comment=3D tabletennis game
 Comment[pl]=Trójwymiarowy tenis sto³owy
+Icon=csmash.png
 Exec=csmash
 Terminal=0
 Type=Application
