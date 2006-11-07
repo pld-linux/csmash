@@ -68,5 +68,5 @@ rm -rf $RPM_BUILD_ROOT
 %lang(ja) %doc README
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/games/csmash
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
 %{_pixmapsdir}/*
