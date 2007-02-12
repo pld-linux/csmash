@@ -1,5 +1,5 @@
 Summary:	3D tabletennis game
-Summary(pl):	TrÛjwymiarowy tenis sto≥owy
+Summary(pl.UTF-8):   Tr√≥jwymiarowy tenis sto≈Çowy
 Name:		csmash
 Version:	0.6.6
 Release:	3
@@ -30,9 +30,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 CannonSmash is a 3D tabletennis game. The goal of this project is to
 represent various strategy of tabletennis on computer game.
 
-%description -l pl
-CannonSmash to trÛjwymiarowy tenis sto≥owy. Celem tego projektu jest
-przedstawienie rÛønych strategii tenisa sto≥owego w grze komputerowej.
+%description -l pl.UTF-8
+CannonSmash to tr√≥jwymiarowy tenis sto≈Çowy. Celem tego projektu jest
+przedstawienie r√≥≈ºnych strategii tenisa sto≈Çowego w grze komputerowej.
 
 %prep
 %setup -q
