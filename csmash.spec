@@ -1,5 +1,5 @@
 Summary:	3D tabletennis game
-Summary(pl.UTF-8):   Trójwymiarowy tenis stołowy
+Summary(pl.UTF-8):	Trójwymiarowy tenis stołowy
 Name:		csmash
 Version:	0.6.6
 Release:	3
