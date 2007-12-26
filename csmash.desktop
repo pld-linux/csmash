@@ -2,10 +2,9 @@
 Name=Cannon Smash
 Comment=3D tabletennis game
 Comment[pl]=Trójwymiarowy tenis stołowy
-Icon=csmash.png
+Icon=csmash
 Exec=csmash
 Terminal=false
 Type=Application
-Encoding=UTF-8
 Categories=GTK;Game;SportsGame;
 # vi: encoding=utf-8
